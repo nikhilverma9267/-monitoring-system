@@ -9,7 +9,7 @@ html {
 body {
   color: #e7e5e4;
   font-family: inherit;
-  background-image:url("/public/bac\ image\ jhar.jpeg");
+  background-image: url("/bac%20image%20jhar.jpeg");
   background-size:cover;
   background-position: center;
   background-attachment: fixed;
