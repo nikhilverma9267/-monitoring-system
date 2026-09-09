@@ -1,10 +1,16 @@
 import { Check, MapPin } from "lucide-react";
-import { PLANTS, STATE } from "../data/plants.js";
+import { STATES} from "../data/plants.js";
 import { getCurrentReading } from "../data/demoWaterQuality.js";
 import { getOverallStatus, STATUS_STYLES } from "../utils/waterQualityStatus.js";
 import StatusBadge from "./StatusBadge.jsx";
 
-export default function PlantSelector({ selectedPlantId, onSelectPlant }) {
+export default function PlantSelector({
+  selectedState,
+  onSelectState,
+  plants,
+  selectedPlantId,
+  onSelectPlant,
+}) {
   return (
     <section id="plants" className="py-16 sm:py-24 scroll-mt-20">
       <div className="section-shell">
@@ -24,13 +30,17 @@ export default function PlantSelector({ selectedPlantId, onSelectPlant }) {
             </label>
             <div className="relative">
               <select
-                id="state-select"
-                value={STATE}
-                disabled
-                className="w-full appearance-none rounded-lg bg-base-800/80 border border-white/10 text-stone-200 text-sm px-3.5 py-2.5 disabled:opacity-90 disabled:cursor-not-allowed"
-              >
-                <option>{STATE}</option>
-              </select>
+  id="state-select"
+  value={selectedState}
+  onChange={(e) => onSelectState(e.target.value)}
+  className="w-full appearance-none rounded-lg bg-base-800/80 border border-stone-700"
+>
+  {STATES.map((state) => (
+    <option key={state} value={state}>
+      {state}
+    </option>
+  ))}
+</select>
               <Check className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 h-4 w-4 text-seam-400" aria-hidden="true" />
             </div>
             <p className="text-xs text-stone-600 mt-3 leading-relaxed">
@@ -44,7 +54,7 @@ export default function PlantSelector({ selectedPlantId, onSelectPlant }) {
             aria-label="Monitored mining areas"
             className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3.5"
           >
-            {PLANTS.map((plant) => {
+            {plants.map((plant) => {
               const reading = getCurrentReading(plant.id);
               const status = getOverallStatus(reading);
               const isSelected = plant.id === selectedPlantId;

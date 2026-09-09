@@ -8,7 +8,7 @@
  * reads through getMonthlySeries() / getCurrentReading() below.
  */
 
-import { PLANTS, MONTHS } from "./plants.js";
+import { PLANTS_BY_STATE, MONTHS } from "./plants.js";
 
 // Small deterministic PRNG (mulberry32) keyed by a string seed, so the
 // same plant always generates the same "demo" year instead of changing
@@ -61,7 +61,8 @@ function buildPlantSeries(plantId) {
 }
 
 // Precompute once per plant id.
-const SERIES_BY_PLANT = PLANTS.reduce((acc, plant) => {
+const ALL_PLANTS = Object.values(PLANTS_BY_STATE).flat();
+const SERIES_BY_PLANT = ALL_PLANTS.reduce((acc, plant) => {
   acc[plant.id] = buildPlantSeries(plant.id);
   return acc;
 }, {});
@@ -81,7 +82,7 @@ export function getCurrentReading(plantId) {
 }
 
 export function getAllCurrentReadings() {
-  return PLANTS.map((plant) => ({
+  return ALL_PLANTS.map((plant) => ({
     plant,
     reading: getCurrentReading(plant.id),
   }));

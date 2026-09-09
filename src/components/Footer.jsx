@@ -28,7 +28,7 @@ export default function Footer() {
             <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-seam-500/10 border border-seam-500/25 text-seam-300">
               <Droplets className="h-4 w-4" strokeWidth={1.75} aria-hidden="true" />
             </span>
-            <span className="text-sm font-medium text-stone-100">Jharkhand Water Monitoring</span>
+            <span className="text-sm font-medium text-stone-100">जल रक्षक Monitoring System</span>
           </a>
           <p className="text-sm text-stone-500 mt-3 leading-relaxed">
             Smart water quality monitoring for rural mining areas.

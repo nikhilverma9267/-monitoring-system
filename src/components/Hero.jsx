@@ -18,7 +18,7 @@ export default function Hero({ onViewDashboard, onViewLive }) {
             <span className="absolute inline-flex h-full w-full rounded-full bg-seam-400 animate-pulseRing" />
             <span className="relative inline-flex h-2 w-2 rounded-full bg-seam-400" />
           </span>
-          <span className="text-xs tracking-[0.14em] text-stone-400">
+          <span className="text-xs tracking-[0.14em]  text-stone-300">
             Live monitoring · rural mining-area water sources
           </span>
         </div>
@@ -27,9 +27,9 @@ export default function Hero({ onViewDashboard, onViewLive }) {
           Real-time water quality monitoring
         </h1>
 
-        <p className="mt-6 text-lg text-stone-400 max-w-2xl leading-relaxed">
+        <p className="mt-7 text-lg text-stone-400 max-w-2xl leading-relaxed">
           Continuous monitoring of critical water parameters across rural mining
-          areas of Jharkhand — tracking pH, turbidity and total dissolved solids
+          areas-tracking pH ,TDS,Turbidity, Arsenic, Lead, Aluminium, Cadium, Water purity % and total dissolved solids
           at each site, with alerts when a reading drifts out of a safe range.
         </p>
 
