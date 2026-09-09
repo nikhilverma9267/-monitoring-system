@@ -90,7 +90,7 @@ export default function PlantSelector({
                     ) : null}
                   </div>
                   <div className="mt-3 flex items-center justify-between">
-                    <span className="text-[11px] text-stone-600">Current status</span>
+                    <span className="text-[11px] text-stone-60">Current status</span>
                     <StatusBadge status={status} size="sm" />
                   </div>
                 </button>
