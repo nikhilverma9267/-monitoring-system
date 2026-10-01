@@ -43,7 +43,7 @@ export default function PlantSelector({
 </select>
               <Check className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 h-4 w-4 text-seam-400" aria-hidden="true" />
             </div>
-            <p className="text-xs text-stone-600 mt-3 leading-relaxed">
+            <p className="text-xs text-stone-200 mt-3 leading-relaxed">
               Additional states can be added here as the monitoring network expands beyond
               Jharkhand.
             </p>
