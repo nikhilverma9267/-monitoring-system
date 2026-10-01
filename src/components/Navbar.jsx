@@ -39,9 +39,12 @@ export default function Navbar() {
           }}
           className="flex items-center gap-3 group"
         >
-          <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-seam-500/10 border border-seam-500/25 text-seam-300 group-hover:border-seam-400/50 transition-colors">
-            <Droplets className="h-4.5 w-4.5" strokeWidth={1.75} aria-hidden="true" />
-          </span>
+          <img
+             src="/jal rakshak.jpeg"
+             alt="Jal Rakshak"
+             className="h-9 w-9 rounded-lg object-cover"
+          />
+          
           <span className="leading-tight">
             <span className="block text-2xl font-bold tracking-[0.16em] text-stone-400">जल रक्षक</span>
             <span className="block text-sm font-medium text-stone-100 -mt-0.5">Water Monitoring</span>
