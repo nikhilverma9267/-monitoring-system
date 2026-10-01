@@ -40,7 +40,7 @@ export default function Navbar() {
           className="flex items-center gap-3 group"
         >
           <img
-             src="jal rakshak.jpeg"
+             src="/jal rakshak.jpeg"
              alt="Jal Rakshak"
              className="h-9 w-9 rounded-lg object-cover"
           />
